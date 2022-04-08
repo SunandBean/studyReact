@@ -7,8 +7,7 @@
   <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/babel">
-    function Btn(props) {
-      console.log(props);
+    function Btn({text, big}) {
       return (
         <button
           style={{
@@ -17,17 +16,18 @@
             padding: "10px 20px",
             border: 0,
             borderRadius: 10,
+            fontSize: big ? 18 : 16
           }}
         >
-          {props.text}
+          {text}
         </button>
       );
     }
     function App() {
       return (
         <div>
-          <Btn text="Save Changes"/>
-          <Btn text="Continue"/>
+          <Btn text="Save Changes" big={true}/>
+          <Btn text="Continue" big={false}/>
         </div>
       );
     }
