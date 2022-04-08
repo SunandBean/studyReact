@@ -12,15 +12,6 @@
         Hello I'm a title
       </h3>
     );
-    /*
-    const h3 = React.createElement(
-      "h3",
-      {
-        onMouseEnter: () => console.log("Mouse is entered"),
-      },
-      "Hello I'm a span"
-    );
-    */
     const Button = (
       <button
         style={{
@@ -31,19 +22,6 @@
         Click me
       </button>
     );
-    /*
-    const btn = React.createElement(
-      "button",
-      {
-        onClick: (,
-        onMouseEnter: () => console.log("Mouse is entered"),
-        style: {
-          backgroundColor: "tomato",
-        },
-      },
-      "Click me"
-    );
-    */
     const container = React.createElement("div", null, [h3, btn]);
     ReactDOM.render(container, root);
   </script>
